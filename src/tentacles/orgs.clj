@@ -6,8 +6,8 @@
 
 (defn user-orgs
   "List the public organizations for a user."
-  [user]
-  (api-call :get "users/%s/orgs" [user] nil))
+  [user & [options]]
+  (api-call :get "users/%s/orgs" [user] options))
 
 (defn orgs
   "List the public and private organizations for the currently
